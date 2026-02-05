@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>¿Mi San Valentín? 💘</title>
+
     <style>
         body {
             font-family: 'Segoe UI', sans-serif;
             background: linear-gradient(135deg, #ff5f8a, #ff9a9e);
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             margin: 0;
+            padding: 20px;
         }
 
         .card {
@@ -30,13 +32,19 @@
             100% { transform: scale(1); opacity: 1; }
         }
 
-        h1 {
-            color: #ff4f7a;
+        img {
+            width: 160px;
+            margin-bottom: 12px;
         }
 
-        .stickers {
-            font-size: 40px;
-            margin-bottom: 10px;
+        h1 {
+            color: #ff4f7a;
+            font-size: 22px;
+        }
+
+        p {
+            font-size: 15px;
+            line-height: 1.4;
         }
 
         button {
@@ -79,53 +87,54 @@
         }
     </style>
 </head>
+
 <body>
 
 <div class="card">
-<div id="question">
 
-    <img src="pregunta.gif"
-         style="width:160px; margin-bottom:10px;"
-         alt="gif pregunta">
+    <!-- PREGUNTA -->
+    <div id="question">
+        <img src="pregunta.gif" alt="gif pregunta">
 
-    <h1>¿Quieres ser mi San Valentín? 💖</h1>
-    <p>Prometo cuidarte y hacerte muy feliz 🥹</p>
+        <h1>¿Quieres ser mi San Valentín? 💖</h1>
+        <p>Prometo cuidarte y hacerte muy feliz 🥹</p>
 
-    <button class="yes" onclick="aceptar()">Sí 💕</button>
-    <button class="no">No </button>
+        <button class="yes" onclick="aceptar()">Sí 💕</button>
+        <button class="no" type="button">No 😅</button>
+    </div>
 
-<div id="respuesta" class="hidden">
+    <!-- RESPUESTA -->
+    <div id="respuesta" class="hidden">
+        <img src="respuesta.gif" alt="gif respuesta">
 
-    <img src="respuesta.gif"
-         style="width:160px; margin-bottom:15px;"
-         alt="gif respuesta">
+        <h1>¡Sabía que dirías que sí! 💖</h1>
 
-    <h1>¡Sabía que dirías que sí! 💖</h1>
+        <p>
+            Te amo inmensamente, preciosa de mi alma 🥹❤️  
+            Gracias por hacerme tan feliz y por todo lo bonito que sos conmigo, mi pequeña.
+        </p>
 
-    <p>
-        Te amo inmensamente, preciosa de mi alma 🥹❤️  
-        Gracias por hacerme tan feliz y por todo lo bonito que sos conmigo, mi pequeña.
-    </p>
+        <p>
+            Por eso te dejé esta cartita hecha con muchísimo amor y cariño,
+            solo para ti, mi bebé preciosa 💌
+        </p>
 
-    <p>
-        Por eso te dejé esta cartita hecha con muchísimo amor y cariño,
-        solo para ti, mi bebé preciosa 💌
-    </p>
-
-    <a href="carta.pdf" target="_blank">💌 Ver mi cartita</a>
+        <a href="carta.pdf" target="_blank">💌 Ver mi cartita</a>
+    </div>
 
 </div>
 
-
 <script>
-    function aceptar() {
-        document.getElementById("question").classList.add("hidden");
-        document.getElementById("respuesta").classList.remove("hidden");
-    }
+function aceptar() {
+    document.getElementById("question").classList.add("hidden");
+    document.getElementById("respuesta").classList.remove("hidden");
+}
 </script>
 
 </body>
 </html>
+
+
 
 
 
