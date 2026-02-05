@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>¿Mi San Valentín? 💘</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #ff5f8a, #ff9a9e);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+
+        .card {
+            background: white;
+            color: #333;
+            padding: 30px;
+            border-radius: 25px;
+            width: 360px;
+            text-align: center;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            animation: pop 0.6s ease;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            color: #ff4f7a;
+        }
+
+        .stickers {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        .yes {
+            background-color: #ff4f7a;
+            color: white;
+        }
+
+        .no {
+            background-color: #ccc;
+            color: #666;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 20px;
+            background: #ff4f7a;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <div id="question">
+        <div class="stickers">🥹💖🌹</div>
+        <h1>¿Quieres ser mi San Valentín?</h1>
+        <p>Mi bebe hermosa 💌</p>
+        <button class="yes" onclick="aceptar()">Sí 💕</button>
+        <button class="no">No </button>
+    </div>
+
+    <div id="respuesta" class="hidden">
+        <div class="stickers">🥰🎉💘</div>
+        <h1>¡Sabía que dirias que si TE AMO inmensamente preciosa de mi alma!</h1>
+        <p>Gracias por hacerme tan feliz y por todo lo bonito que sos conmigo, mi pequeña🥹💖</p>
+        <p>Por eso descarga esta cartita hecha con mucho amor y cariño, para mi bebé preciosa:</p>
+        <a href="ILOVECamilita.pdf" download>💌 Descargar carta</a>
+    </div>
+</div>
+
+<script>
+    function aceptar() {
+        document.getElementById("question").classList.add("hidden");
+        document.getElementById("respuesta").classList.remove("hidden");
+    }
+</script>
+
+</body>
+</html>
