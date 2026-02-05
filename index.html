@@ -82,28 +82,33 @@
     </div>
 
     <div id="respuesta" class="hidden">
-        <h1>🥰 Sabía que dirías que sí 🥰</h1>
-        <p>Eres mi persona favorita 💘</p>
+        <h1>Ya sabia que ibas a decir que si muejeje🥰</h1>
+        <p>Eres y seras mi persona favorita siempre 💘</p>
         <a href="carta.pdf" download>💌 Descargar mi cartita</a>
     </div>
 </div>
 
 <script>
     let intentos = 0;
-    const gifs = [
-        "https://media.giphy.com/media/3o6Zt481isNVuQI1l6/giphy.gif",
-        "https://media.giphy.com/media/26ufcYAkp8e66vanu/giphy.gif",
-        "https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif"
+
+    const gifsGatos = [
+        "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",     // gato molesto
+        "https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif",    // gato juzgando
+        "https://media.giphy.com/media/l1J9u3TZfpmeDLkD6/giphy.gif", // gato dramático
+        "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif"     // gato muy enojado
     ];
 
     function rechazar() {
         intentos++;
 
         const yesBtn = document.getElementById("yesBtn");
-        yesBtn.style.transform = `scale(${1 + intentos * 0.2})`;
+        yesBtn.style.transform = `scale(${1 + intentos * 0.25})`;
 
         const gifDiv = document.getElementById("gif");
-        gifDiv.innerHTML = `<img src="${gifs[intentos % gifs.length]}" alt="enojo">`;
+        gifDiv.innerHTML = `
+            <p>😾 ¿Segura?</p>
+            <img src="${gifsGatos[intentos % gifsGatos.length]}" alt="gato enojado">
+        `;
     }
 
     function aceptar() {
@@ -112,5 +117,4 @@
     }
 </script>
 
-</body>
-</html>
+
