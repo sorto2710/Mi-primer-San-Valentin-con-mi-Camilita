@@ -94,34 +94,30 @@
 </div>
 
 <script>
-    let intentos = 0;
+  let intentos = 0;
 
-    const gifsGatos = [
-        "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",     // gato molesto
-        "https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif",    // gato juzgando
-        "https://media.giphy.com/media/l1J9u3TZfpmeDLkD6/giphy.gif", // gato dramático
-        "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif"     // gato muy enojado
-    ];
+  const gifsGatos = [
+    "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif",
+    "https://media.giphy.com/media/mlvseq9yvZhba/giphy.gif",
+    "https://media.giphy.com/media/l1J9u3TZfpmeDLkD6/giphy.gif",
+    "https://media.giphy.com/media/ICOgUNjpvO0PC/giphy.gif"
+  ];
 
-    function rechazar() {
-        intentos++;
+  function rechazar() {
+    intentos++;
 
-        const yesBtn = document.getElementById("yesBtn");
-        yesBtn.style.transform = `scale(${1 + intentos * 0.25})`;
+    const yesBtn = document.getElementById("yesBtn");
+    yesBtn.style.transform = `scale(${1 + intentos * 0.25})`;
 
-        const gifDiv = document.getElementById("gif");
-        gifDiv.innerHTML = `
-            <p>😾 ¿Segura?</p>
-            <img src="${gifsGatos[intentos % gifsGatos.length]}" alt="gato enojado">
-        `;
-    }
+    const gifDiv = document.getElementById("gif");
+    gifDiv.innerHTML = `
+      <p style="margin-top:10px;">😾 ¿Segura?</p>
+      <img src="${gifsGatos[intentos % gifsGatos.length]}" alt="gato enojado" style="width:150px; margin-top:10px;">
+    `;
+  }
 
-    function aceptar() {
-        document.getElementById("question").classList.add("hidden");
-        document.getElementById("respuesta").classList.remove("hidden");
-    }
+  function aceptar() {
+    document.getElementById("question").classList.add("hidden");
+    document.getElementById("respuesta").classList.remove("hidden");
+  }
 </script>
-
-
-
-
